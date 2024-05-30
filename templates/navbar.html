@@ -1,0 +1,35 @@
+<style>
+
+    .nav-container{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        margin: 0px 40px 0px 40px;
+    }
+
+</style>
+
+<div class="nav-container">
+
+<div>
+    <a href="/">
+        <h1>
+            TrueFanAssignment - by Hitansh
+        </h1>
+    </a>
+</div>
+
+<div>
+    <form method="GET" action="{% url "allproduct" %}">
+        {% csrf_token %}
+        <input type="text" placeholder="Search here..." name="q"/>
+    </form>
+</div>
+
+<div>
+    <a href='{% url "create-product" %}'><h3>+ New Product</h3></a>
+</div>
+
+</div>
+<hr>

@@ -1,0 +1,19 @@
+<div>        
+    <h4>Total {{productscount}} rooms <h4>
+    <div>
+        <div>
+            <hr>
+
+            {% for x in allproducts %}
+                <div>
+                    <small>Category: {{x.category.name}}</small><br>
+                        <a href="{% url 'getproduct' x.id %}">
+                            <h3>Product --- {{x.name}}</h3>
+                            <h3>Price --- {{x.price}}</h3>
+                        </a>
+                </div>
+                <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>

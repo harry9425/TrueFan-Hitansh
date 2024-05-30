@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<h1>
+    This is {{product.name}} Page
+</h1>
+
+<div>
+    <a href="{% url "allproduct" %}?q={{product.category.name}}">
+        <small>
+            Category: {{product.category.name}}
+        </small>
+    </a><br>                    
+                            <h3>Product --- {{product.name}}</h3>
+                            <h3>Price --- {{product.price}}</h3>
+                        </a>
+    <small><a href='{% url "update-product" product.id%}'>Edit Product</a> 
+        <a href='{% url "delete-product" product.id%}'>Delete Product</a>
+    </small>
+</div>
+
+{% endblock content %}

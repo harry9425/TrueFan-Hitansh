@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<style>
+
+    .allproducts-container{
+        display:grid;
+        grid-template-columns:1fr 2fr;
+    }
+
+</style>
+
+
+<div class="allproducts-container">
+    <div>
+    {% include "base/category_component.html" %}
+    </div>
+    <div>    
+    {% include "base/productfeed_component.html" %}
+    </div>
+</div>
+
+{% endblock content %}
